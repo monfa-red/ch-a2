@@ -9,13 +9,13 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 // Routings
-var routes = require('./app/routes/index');
-var users = require('./app/routes/users');
+var routes = require('./server/routes/index');
+var users = require('./server/routes/users');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'app', 'views'));
+app.set('views', path.join(__dirname, 'server', 'views'));
 app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public
