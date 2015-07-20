@@ -3,7 +3,7 @@ var router = express.Router();
 
 // connect to mongodb
 var mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost/chat');
+// mongoose.connect('mongodb://localhost/chat');
 
 
 // Schema
@@ -13,7 +13,7 @@ var personSchema = {
   email: String
 }
 
-var Person = mongoose.model('person', personSchema, 'people')
+var Person = mongoose.model('person', personSchema, 'people');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

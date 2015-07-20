@@ -2,7 +2,7 @@
  * Module dependencie
  */
 var mongoose = require('mongoose');
-var User = mongoose.model('User')
+var User = mongoose.model('User');
 
 
 
@@ -31,4 +31,4 @@ var User = mongoose.model('User')
  		}
  		res.json(users);
  	})
- }
+ };

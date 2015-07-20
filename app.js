@@ -4,13 +4,37 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var chalk = require('chalk');
 
-// mongo DB
+
+
+
+// mongodb
 var mongoose = require('mongoose');
+
+// Main Config file
+var config = require('./server/config/config');
+
+// Bootstrap db connection
+var db = mongoose.connect(config.db, function(err) {
+  if (err) {
+    console.error(chalk.bgRed('Could not connect to MongoDB'));
+    console.error(chalk.red(err));
+  } else {
+    /**
+     * TODO:
+     * remove this block !!
+     */
+    console.log(chalk.blue('connected to db from app.js'))
+  }
+
+});
 
 // Routings
 var routes = require('./server/routes/index');
 var users = require('./server/routes/users');
+
+
 
 var app = express();
 
