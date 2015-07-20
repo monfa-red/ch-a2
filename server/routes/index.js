@@ -7,20 +7,20 @@ var mongoose = require("mongoose");
 
 
 // Schema
-var personSchema = {
-  firstName: String,
-  lastName: String,
-  email: String
-}
+// var personSchema = {
+//   firstName: String,
+//   lastName: String,
+//   email: String
+// }
 
-var Person = mongoose.model('person', personSchema, 'people');
+// var Person = mongoose.model('person', personSchema, 'people');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Person.find(function (err, doc) {
-    res.send(doc);
-  })
-  // res.render('index', { title: 'Express' });
+  // Person.find(function (err, doc) {
+  //   res.send(doc);
+  // })
+  res.render('index', { title: 'Express' });
 });
 
 //test

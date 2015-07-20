@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var chalk = require('chalk');
 
+require('./server/models/user.model');
 
 
 

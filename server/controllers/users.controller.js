@@ -24,11 +24,14 @@ var User = mongoose.model('User');
  * Just a test!
  */
  module.exports.list = function(req, res) {
- 	User.find(function(err, users) {
- 		if (err) {
- 			console.log(err);
- 			res.redirect('/');
- 		}
- 		res.json(users);
- 	})
+    User
+        .find()
+        .exec(function(err, users) {
+            if (err) {
+                console.log(err);
+                res.redirect('/');
+            }
+            // console.log(users);
+            res.json(users);
+        });
  };

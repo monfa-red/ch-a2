@@ -18,20 +18,20 @@ var UserSchema = new Schema({
 		type: String,
 		trim: true,
 		default: '',
-		validate: 'Please fill in your first name'
+		// validate: [validate, 'Please fill in your first name']
 	},
 	lastName: {
 		type: String,
 		trim: true,
 		default: '',
-		validate: 'Please fill in your last name'
+		// validate: [validate, 'Please fill in your last name']
 	},
 	email: {
 		type: String,
 		trim: true,
 		default: '',
-		validate: 'Please fill in your email address',
-		match: [/.+\@.+\..+/, 'Please fill a valid email address']
+		// validate: [validate, 'Please fill in your email address'],
+		// match: [/.+\@.+\..+/, 'Please fill a valid email address']
 	},
 	password: {
 		type: String,
@@ -43,4 +43,15 @@ var UserSchema = new Schema({
 	}
 });
 
+/**
+ * Testing Schema.pre()
+ */
+UserSchema.pre('save', function(next) {
+	console.log("saveed a user form user.model");
+	next();
+});
+
+/**
+ * Compiling UserSchema into User model
+ */
 mongoose.model('User', UserSchema);
