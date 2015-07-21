@@ -20,19 +20,19 @@ router.get('/', function(req, res, next) {
   // Person.find(function (err, doc) {
   //   res.send(doc);
   // })
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Angular 2!' });
 });
 
 //test
-router.get('/add/:name', function(req, res, next) {
-	new Person({
-		firstName: req.params.name,
-		lastName: "monfared",
-		email: "a@monfa.red"
-	})
-	.save(function(err, msg) {
-		res.send(msg)
-	})
-})
+// router.get('/add/:name', function(req, res, next) {
+// 	new Person({
+// 		firstName: req.params.name,
+// 		lastName: "monfared",
+// 		email: "a@monfa.red"
+// 	})
+// 	.save(function(err, msg) {
+// 		res.send(msg)
+// 	})
+// })
 
 module.exports = router;
