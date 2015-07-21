@@ -1,23 +1,33 @@
-/// <reference path="typings/angular2/angular2.d.ts" />
+/// <reference path="../typings/tsd.d.ts" />
 
 import {Component, View, bootstrap} from 'angular2/angular2';
+import {RouteConfig, RouterOutlet, RouterLink, routerInjectables} from 'angular2/router';
+
+import {Home} from './components/home/home';
+import {Register} from './components/register/register';
 
 // Anotation section
 @Component({
 	selector: 'my-app'
 })
+@RouteConfig([
+	{path: '/home', component: Home, as: 'home'},
+	{path: '/register', component: Register, as: 'register'}
+])
 @View({
-	template: `<h1>Hello {{ name }}</h1>`,
+	templateUrl: `app.html`,
+	directives: [RouterOutlet, RouterLink]
+
 })
 
-// Component controller
+// Component controller.
 class MyAppComponent {
 	name: string;
 	
 	constructor() {
-		this.name = "World";
+		this.name = "Abbas";
 	}
 }
 
 // Bootstrap!
-bootstrap(MyAppComponent);
+bootstrap(MyAppComponent,  [routerInjectables]);
