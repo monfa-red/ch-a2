@@ -1,5 +1,5 @@
 /// <reference path="../typings/tsd.d.ts" />
-if (typeof __decorate !== "function") __decorate = function (decorators, target, key, desc) {
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
     switch (arguments.length) {
         case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
@@ -7,14 +7,13 @@ if (typeof __decorate !== "function") __decorate = function (decorators, target,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
-if (typeof __metadata !== "function") __metadata = function (k, v) {
+var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
 var router_1 = require('angular2/router');
 var home_1 = require('./components/home/home');
 var register_1 = require('./components/register/register');
-// Anotation section
 var MyAppComponent = (function () {
     function MyAppComponent() {
         this.name = "Abbas";
@@ -35,5 +34,4 @@ var MyAppComponent = (function () {
     ], MyAppComponent);
     return MyAppComponent;
 })();
-// Bootstrap!
 angular2_1.bootstrap(MyAppComponent, [router_1.routerInjectables]);
