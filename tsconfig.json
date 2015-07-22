@@ -1,0 +1,32 @@
+{
+    "version": "1.5.0",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
+    	"experimentalDecorators": true,
+        "sourceMap": true
+    },
+    "files": [
+        "./public/main.ts",
+        "./public/components/home.ts",
+        "./public/components/register/home.ts",
+        "./typings/angular2/angular2.d.ts",
+        "./typings/angular2/router.d.ts",
+        "./typings/custom.system.d.ts",
+        "./typings/es6-promise/es6-promise.d.ts",
+        "./typings/rx/rx-lite.d.ts",
+        "./typings/rx/rx.d.ts",
+        "./typings/tsd.d.ts"
+    ],
+    "filesGlob": [
+        "./public/**/*.ts",
+        "./typings/**/*.ts",
+        "!./node_modules/**/*.ts"
+    ],
+    "compileOnSave": false
+}
