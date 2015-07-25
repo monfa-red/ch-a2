@@ -23,5 +23,8 @@ var users = require('../controllers/users.controller');
 // });
 
 router.get('/list', users.list);
+router.get('/list/:test', users.list);
+
+router.post('/add', users.create);
 
 module.exports = router;

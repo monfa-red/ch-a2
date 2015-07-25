@@ -15,7 +15,9 @@ var Register = (function () {
     function Register() {
     }
     Register = __decorate([
-        angular2_1.Component({}),
+        angular2_1.Component({
+            selector: 'home-app'
+        }),
         angular2_1.View({
             template: "<h4>Register Page :P</h4>",
         }), 

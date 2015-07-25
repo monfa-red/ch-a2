@@ -23,6 +23,6 @@ gulp.task('serve', function (done) {
   runSequence('typescript', 'xxx', 'yyy', done);
 });
 
-gulp.task('watch', function() {
+gulp.task('default', function() {
 	gulp.watch([path.join(config.baseUrl, '**/*.ts')], ['typescript'])
 });

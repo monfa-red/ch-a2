@@ -2,7 +2,7 @@
 import {Component, View} from 'angular2/angular2';
 
 @Component({
-  // selector: 'home-app'
+  selector:  'home-app'
 })
 @View({
   template: `<h4>Register Page :P</h4>`,

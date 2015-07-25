@@ -19,13 +19,13 @@ var MyAppComponent = (function () {
         this.name = "Abbas";
     }
     MyAppComponent = __decorate([
+        router_1.RouteConfig([
+            { path: '', component: home_1.Home, as: 'home' },
+            { path: '/register', component: register_1.Register, as: 'register' },
+        ]),
         angular2_1.Component({
             selector: 'my-app'
         }),
-        router_1.RouteConfig([
-            { path: '/home', component: home_1.Home, as: 'home' },
-            { path: '/register', component: register_1.Register, as: 'register' }
-        ]),
         angular2_1.View({
             templateUrl: "app.html",
             directives: [router_1.RouterOutlet, router_1.RouterLink]

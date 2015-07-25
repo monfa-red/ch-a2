@@ -22,6 +22,12 @@ router.get('/', function(req, res, next) {
   // })
   res.render('index', { title: 'Angular 2!' });
 });
+router.get('/register', function(req, res, next) {
+  // Person.find(function (err, doc) {
+  //   res.send(doc);
+  // })
+  res.render('index', { title: 'Angular 2!' });
+});
 
 //test
 // router.get('/add/:name', function(req, res, next) {
