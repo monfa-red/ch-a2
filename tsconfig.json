@@ -13,8 +13,8 @@
     },
     "files": [
         "./public/main.ts",
-        "./public/components/home.ts",
-        "./public/components/register/home.ts",
+        "./public/components/home/home.ts",
+        "./public/components/register/register.ts",
         "./typings/angular2/angular2.d.ts",
         "./typings/angular2/router.d.ts",
         "./typings/custom.system.d.ts",
